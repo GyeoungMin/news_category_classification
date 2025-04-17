@@ -1,4 +1,4 @@
-# raw_data = news_headlines.csv
+# raw_data = news_headlines_20250416.csv
 # columns = [title, category]
 # jinwo 0,1 / heachan 2,3 / gyeongmin 4,5
 
@@ -20,9 +20,9 @@ service = ChromeService(executable_path=ChromeDriverManager().install())
 driver = webdriver.Chrome(service=service, options=options)
 
 # change int value by one's part
-my_category = [4, 5]
+my_part = [4, 5]
 
-for num in my_category:
+for num in my_part:
     df_titles = pd.DataFrame()
     button_xpath = '//*[@id="newsct"]/div[{}]/div/div[2]'.format(div_category[num])
 
